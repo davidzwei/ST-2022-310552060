@@ -12,21 +12,21 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 public class PriorityQueueTest {
     static Stream<Arguments> streamProvider(){
         //pass
-//         return Stream.of(
-//                 Arguments.of(new int[] {2, 1, 3}, new int[] {1, 2, 3}),
-//                 Arguments.of(new int[] {3, 7, 6}, new int[] {3, 6, 7}),
-//                 Arguments.of(new int[] {0, 2, -2, 9}, new int[] {-2, 0, 2, 9}),
-//                 Arguments.of(new int[] {8, 3, -5, -7}, new int[] {-7, -5, 3, 8}),
-//                 Arguments.of(new int[] {2, 4, 6, -4, -6}, new int[] {-6, -4, 2, 4, 6})
-//         );
+        return Stream.of(
+                Arguments.of(new int[] {2, 1, 3}, new int[] {1, 2, 3}),
+                Arguments.of(new int[] {3, 7, 6}, new int[] {3, 6, 7}),
+                Arguments.of(new int[] {0, 2, -2, 9}, new int[] {-2, 0, 2, 9}),
+                Arguments.of(new int[] {8, 3, -5, -7}, new int[] {-7, -5, 3, 8}),
+                Arguments.of(new int[] {2, 4, 6, -4, -6}, new int[] {-6, -4, 2, 4, 6})
+        );
         //wrong
-       return Stream.of(
-               Arguments.of(new int[] {2, 1, 3}, new int[] {2, 1, 3}),
-               Arguments.of(new int[] {3, 7, 5}, new int[] {7, 5, 3}),
-               Arguments.of(new int[] {0, 2, -2, 9}, new int[] {0, -2, 2, 9}),
-               Arguments.of(new int[] {8, 3, -5, -7}, new int[] {-7, 3, -5, 8}),
-               Arguments.of(new int[] {2, 4, 6, -4, -6}, new int[] {-6, 4, 2, -4, 6})
-       );
+//        return Stream.of(
+//                Arguments.of(new int[] {2, 1, 3}, new int[] {2, 1, 3}),
+//                Arguments.of(new int[] {3, 7, 5}, new int[] {7, 5, 3}),
+//                Arguments.of(new int[] {0, 2, -2, 9}, new int[] {0, -2, 2, 9}),
+//                Arguments.of(new int[] {8, 3, -5, -7}, new int[] {-7, 3, -5, 8}),
+//                Arguments.of(new int[] {2, 4, 6, -4, -6}, new int[] {-6, 4, 2, -4, 6})
+//        );
     }
     @ParameterizedTest(name = "#{index} - Test with Argument={0}, {1}")
     @MethodSource("streamProvider")
